@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: #042331;
+}
+.sidebar{
+    width: 200px;
+    height: 100vh;
+    background-color: #042331;
+    color: #fff;
+    position: absolute;
+    left: -250px;
+    transition: all .4s ease;
+}
+.sidebar header{
+    text-align: center;
+    padding: 15px 0;
+    background-color: #053347;
+    user-select: none;
+}
+.sidebar ul li{
+    list-style: none;
+    padding: 20px;
+    border-top: 1px solid #053347;
+    border-bottom: 1px solid black;
+}
+.sidebar ul li a{
+    text-decoration: none;
+    color: #fff;
+    transition: all .4s ease;
+}
+.sidebar ul li a i{
+    margin-right: 12px;
+}
+.sidebar ul li a:hover{
+    margin-left: 30px;
+}
+#check{
+    display: none;
+}
+label{
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    margin-left: 30px;
+}
+label .openBar{
+    position: absolute;
+    top: 15px;
+    background-color: #053347;
+    padding: 4px;
+    left: 0;
+    opacity: 1;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 7px;
+}
+label .closeBar{
+   position: absolute;
+   left:-370px;
+   padding: 8px;
+    background-color: #042331;
+    top: 8px;
+    opacity: 0;
+    cursor: pointer;
+    border-radius: 7px;
+}
+#check:checked ~ .sidebar{
+    left: 0px;
+}
+#check:checked ~ label .openBar{
+    opacity: 0;
+    left: -250px;
+}
+#check:checked ~ label .closeBar{
+    left: 120px;
+    opacity: 1;
+    transition: all .4s ease;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://www.amd.com/content/dam/amd/en/images/abstract/648568-developer-code.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.4s ease-in;
+    
+}
+#check:checked ~ section{
+    margin-left: 180px;
+    width: 198vh;
+    
+}
